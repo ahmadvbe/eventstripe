@@ -9,6 +9,10 @@ export async function POST(request: Request) { //post req which is gonna be trig
   const sig = request.headers.get('stripe-signature') as string
   //we hve the secret
   const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET!
+  console.log(body)
+  console.log(sig)
+  console.log(endpointSecret)
+
 
   //then we listen for a specific event type
 
